@@ -1,6 +1,7 @@
 from thinkprice.abstract.abstract_board_importer import AbstractBoardImporter
 from thinkprice.board.board import Board
 from thinkprice.board.board_component import BoardComponent, ComponentType, MountingSide
+from thinkprice.components.resistor import Resistor
 import os
 import struct
 
@@ -19,7 +20,8 @@ class FileBoardImporter(AbstractBoardImporter):
 
         for comp in self.board.components:
             if comp.name.strip() != '':
-                components.append(comp)
+                if comp.name[0] == 'R':
+                    components.append(Resistor(comp.name))
         return components
 
     def import_board(self, file_name):

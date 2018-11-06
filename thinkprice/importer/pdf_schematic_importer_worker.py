@@ -71,6 +71,7 @@ class PdfSchematicImporterWorker(threading.Thread):
                 pdfminer.high_level.extract_text_to_fp(fp, **locals())
 
         # squash everything into a non-spaced string
-        self.output = ''.join(self.out_io.getvalue().split())
+        #self.output = ''.join(self.out_io.getvalue().split())
+        self.output = self.out_io.getvalue()
 
 
