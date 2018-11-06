@@ -1,6 +1,6 @@
-from abstract.abstract_board_importer import AbstractBoardImporter
-from board.board import Board
-from board.board_component import BoardComponent, ComponentType, MountingSide
+from thinkprice.abstract.abstract_board_importer import AbstractBoardImporter
+from thinkprice.board.board import Board
+from thinkprice.board.board_component import BoardComponent, ComponentType, MountingSide
 import os
 import struct
 

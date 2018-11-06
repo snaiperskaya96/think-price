@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class AbstractBoardImporter(ABC):
     @abstractmethod
     def import_board(self, param):
